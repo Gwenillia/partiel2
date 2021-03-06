@@ -1,0 +1,23 @@
+{
+  "name": "partiel2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gwenillia/partiel2.git"
+  },
+  "author": "gwen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gwenillia/partiel2/issues"
+  },
+  "homepage": "https://github.com/Gwenillia/partiel2#readme",
+  "description": "",
+  "devDependencies": {
+    "eslint": "^7.21.0"
+  }
+}

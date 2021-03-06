@@ -1,0 +1,20 @@
+[
+  {
+    "reference": "Cdc",
+    "description": "Rédaction d'un cahier des charges de qualités Trois retours max",
+    "quantité": 1,
+    "prix": 1000
+  },
+  {
+    "reference": "Mise en ligne",
+    "description": null,
+    "quantité": 1,
+    "prix": 500
+  },
+  {
+    "reference": "Réparer votre imprimante",
+    "description": "Je suis pas informaticien pour rien",
+    "quantité": 1,
+    "prix": 9999.99
+  }
+]

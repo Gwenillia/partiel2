@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Facturier</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+</head>
+<body>
+<div class="modaleContainer" id="modale">
+    <div class="modaleContent">
+        <button id="closeModale" class="closeModale">X</button>
+        <select name="selectService" id="selectService">
+        </select>
+        <button id="addToInvoice" class="closeModale">Ajouter à la facture</button>
+    </div>
+</div>
+<main>
+    <div class="modaleAlerte">
+        <p>Souviens-toi : il suffit de cliquer sur un texte pour l'éditer (client, numéro facture notamment)</p>
+    </div>
+    <h1>Facture Numéro : <input type="number"/></h1>
+    <div class="coords">
+        <ul>
+            <li>Prestataire</li>
+            <li>Tripet-Costet Gwen</li>
+            <li>contact@gcostet.fr</li>
+            <li>1 rue Marguerite Duras - 31200 Toulouse</li>
+            <li>06 42 47 06 83</li>
+            <li>Siret : 483 104 097 00017</li>
+        </ul>
+        <div>
+            <p>Client</p>
+            <div class="dataInput">
+                <input type="text" name="clientNom" id="clientNom" onkeyup="checkEmptyness()" required>
+                <label for="clientNom" class="clientLabel">Nom et Prénom</label>
+                <p class="hint">Champ obligatoire</p>
+            </div>
+            <div class="dataInput">
+                <input type="text" name="clientEmail" id="clientEmail" onkeyup="checkEmptyness()">
+                <label for="clientEmail" class="clientLabel">Adresse Email</label>
+                <p class="hint">Champ obligatoire</p>
+            </div>
+            <div class="dataInput">
+                <input type="text" name="adresseClient" id="adresseClient" onkeyup="checkEmptyness()">
+                <label for="adresseClient" class="clientLabel">Adresse Postale</label>
+            </div>
+            <div class="dataInput">
+                <input type="text" name="telClient" id="telClient" onkeyup="checkEmptyness()">
+                <label for="telClient" class="clientLabel">Téléphone</label>
+                <p class="hint">Champ obligatoire</p>
+            </div>
+        </div>
+    </div>
+    <div class="rowContainer">
+        <div class="rowContent" id="rowContent">
+            <div class="dataInput">
+                <input type="text" name="ref" id="ref" onkeyup="checkEmptyness()">
+                <label for="ref" class="labelLigne">Référence</label>
+                <p class="hint"></p>
+            </div>
+            <div class="dataInput">
+                <textarea class="desc" name="des" id="des" rows="1" onkeypress="hauteurTextArea()"
+                          onkeyup="checkEmptyness()"></textarea>
+                <label for="des" class="labelLigne">Description</label>
+                <p class="hint"></p>
+            </div>
+            <div class="dataInput">
+                <input type="number" name="qte" id="qte" onkeyup="checkEmptyness()" qte="qte[]">
+                <label for="qte" class="labelLigne">Quantité</label>
+                <p class="hint"></p>
+            </div>
+            <div class="dataInput">
+                <input type="number" name="price" id="price" onkeyup="checkEmptyness()" class="price" price="price[]">
+                <label for="price" class="labelLigne">Prix unitaire</label>
+                <p class="hint"></p>
+            </div>
+            <button onclick="delLigne(this)">X</button>
+        </div>
+    </div>
+    <aside>
+        <button id="addService">Ajouter un service existant</button>
+        <button id="addLigne">Nouvelle ligne</button>
+        <ul>
+            <li>Total HT : <span id="pHT"></span></li>
+            <li>TVA : 20%</li>
+            <li>Total TTC : <span id="pTTC"></span></li>
+        </ul>
+    </aside>
+</main>
+</body>
+</html>
